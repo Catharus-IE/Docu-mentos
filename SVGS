@@ -1,1 +1,24 @@
-
+<!-- .github/svgs/magic_radar.svg -->
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+    .scan { 
+      stroke-dasharray: 5; 
+      animation: rotate 20s linear infinite;
+      transform-origin: center;
+    }
+  </style>
+  
+  <rect width="100%" height="100%" fill="#1a1a2e"/>
+  
+  <g transform="translate(200,100)">
+    <!-- 动态扫描线 -->
+    <path class="scan" d="M-150,0 A150,150 0 1,1 150,0" stroke="#9b59b6" fill="none"/>
+    
+    <!-- 观测者标识 -->
+    <text x="-30" y="20" fill="#ff69b4" font-family="monospace" font-size="15">
+      Catharus-IE
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </text>
+  </g>
+</svg>
