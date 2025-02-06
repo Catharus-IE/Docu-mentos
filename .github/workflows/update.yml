@@ -1,9 +1,8 @@
-```yaml
 name: Observatory Update
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间0点运行
+    - cron: '0 0 * * *'  # 每天 UTC 时间 0 点运行
   workflow_dispatch:     # 允许手动触发
 
 jobs:
@@ -12,20 +11,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Update Metadata
         run: |
           # 生成动态数据
           DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          SAN=$(( RANDOM % 60 + 30 ))
+          SAN=$(( RANDOM % 70 + 30 ))  # 生成范围 [30, 99] 的随机数
           
-          # 替换README内容
+          # 输出日志
+          echo "当前时间：${DATE}"
+          echo "SAN 值：${SAN}"
+          
+          # 检查 README.md 文件内容是否符合预期
+          if ! grep -q "最后校准时间：" README.md; then
+            echo "未找到 '最后校准时间'，请检查 README.md 文件格式"
+            exit 1
+          fi
+
+          if ! grep -q "SAN-" README.md; then
+            echo "未找到 'SAN-'，请检查 README.md 文件格式"
+            exit 1
+          fi
+          
+          # 替换 README 内容
           sed -i "s/最后校准时间：.*/最后校准时间：${DATE}/" README.md
           sed -i "s/SAN-.*/SAN-${SAN}\/99-critical/" README.md
-          
+
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🌌 自动更新观测数据"
           branch: main
-```
