@@ -1,0 +1,31 @@
+```yaml
+name: Observatory Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天UTC时间0点运行
+  workflow_dispatch:     # 允许手动触发
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Update Metadata
+        run: |
+          # 生成动态数据
+          DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          SAN=$(( RANDOM % 60 + 30 ))
+          
+          # 替换README内容
+          sed -i "s/最后校准时间：.*/最后校准时间：${DATE}/" README.md
+          sed -i "s/SAN-.*/SAN-${SAN}\/99-critical/" README.md
+          
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🌌 自动更新观测数据"
+          branch: main
+```
