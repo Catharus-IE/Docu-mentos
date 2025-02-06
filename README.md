@@ -1,6 +1,6 @@
 <!-- 星空观测站主控面板 -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Catharus-IE/Docu-mentos/main/svgs/magic_radar.svg">
+  <img src="https://raw.githubusercontent.com/Catharus-IE/Docu-mentos/main/.github/svgs/magic_radar.svg">
   
   ```diff
 + ░▒▓ 深空观测协议 vΔ3.14 ▓▒░
