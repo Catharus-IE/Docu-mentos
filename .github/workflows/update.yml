@@ -14,14 +14,13 @@ jobs:
 
       - name: Update Metadata
         run: |
-          # 生成动态数据
+          #!/bin/bash
           DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          SAN=$(( RANDOM % 70 + 30 ))  # 生成范围 [30, 99] 的随机数
-          
-          # 输出日志
+          SAN=$(( $(shuf -i 30-99 -n 1) ))  # 使用 shuf 生成随机数
+
           echo "当前时间：${DATE}"
           echo "SAN 值：${SAN}"
-          
+
           # 检查 README.md 文件内容是否符合预期
           if ! grep -q "最后校准时间：" README.md; then
             echo "未找到 '最后校准时间'，请检查 README.md 文件格式"
@@ -32,10 +31,11 @@ jobs:
             echo "未找到 'SAN-'，请检查 README.md 文件格式"
             exit 1
           fi
-          
+
           # 替换 README 内容
-          sed -i "s/最后校准时间：.*/最后校准时间：${DATE}/" README.md
-          sed -i "s/SAN-.*/SAN-${SAN}\/99-critical/" README.md
+          chmod +w README.md
+          sed -i.bak "s/最后校准时间：.*/最后校准时间：${DATE}/" README.md
+          sed -i.bak "s/SAN-.*/SAN-${SAN}\/99-critical/" README.md
 
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
