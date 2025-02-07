@@ -5,25 +5,45 @@
   ```diff
 + ░▒▓ 深空观测协议 vΔ3.14 ▓▒░
 ! 最后校准时间：【数据删除】
-- 警告：检测到【数据删除】
-  ```
-  
-  [![SAN值](https://img.shields.io/badge/SAN-${Math.floor(Math.random()*60)+30}/99-critical)](https://github.com/Catharus-IE)
-</div>
+- 警告：检测到【数据删除】存在
 
-## 📡 实时数据流
+  ```
+
+
+---
+
+## 📡 
  <details>
- <summary>🌌观测者守则</summary>
-  
-  ```diff
+ <summary>🔭 危险天文现象-</summary>
+
+- **拉莱耶星云异常波动**  
+  `检测到异常的异步能量辐射`  
+  ![污染指数](https://progress-bar.dev/88/?title=理智污染&color=9b59b6)
+
+- **敦威治代码风暴**  
+  `在二进制洪流中发现非欧几里得结构`  
+  ![混沌值](https://progress-bar.dev/120/?title=混沌指数&color=ff69b4)
+
+- **印斯茅斯数据潮汐**  
+  `深海commit中涌现鱼人族基因序列`  
+  ![异化率](https://progress-bar.dev/100/?title=血肉异化&color=00ff9d)
+
+ ```diff
  + [√] "接收到拉莱耶低频脉冲",
  ! [≈] "检测到非欧几何波形",
  - [×] "发现未知commit记录",
  + [√] "WARNING: 旧印衰减中"
 ```
+
+### 📖 《蠕虫之秘》摘录
+> "当三个bug同时消失时，定有第四个在暗处滋生"  
+> —— 阿卜杜拉·阿尔哈萨德 第4卷Δ章
+
+
+```
 </details>
 
-## 🎮 **控制面板**
+## 🎮 **交互面板**
  <details>
  <summary>🌌观测者守则</summary>
   
@@ -34,6 +54,13 @@
 + [√] 所有发现必须用R'lyeh文记录
 ```
 </details>
+
+---
+
+ <details>
+
+
+
 
 
 ## 🌑 **终极深渊之门**
