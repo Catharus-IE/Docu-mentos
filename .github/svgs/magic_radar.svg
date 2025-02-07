@@ -1,12 +1,19 @@
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- 背景正方形 -->
-  <rect x="50" y="50" width="100" height="100" fill="none" stroke="black" stroke-width="2"/>
-  <!-- 移动的圆形 -->
-  <circle cx="50" cy="50" r="10" fill="blue">
-    <animateMotion dur="5s" repeatCount="indefinite">
-      <mpath href="#motionPath"/>
-    </animateMotion>
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#007BFF" stroke-width="4">
+    <animate attributeName="stroke-dasharray" from="0 942" to="942 0" dur="5s" repeatCount="indefinite" />
   </circle>
-  <!-- 定义圆形的运动路径 -->
-  <path id="motionPath" d="M50,50 L150,50 L150,150 L50,150 L50,50" fill="none" stroke="red" stroke-width="1" />
+  <!-- 旋转的正方形 -->
+  <rect x="150" y="150" width="100" height="100" fill="#FF5733">
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 200 200" to="360 200 200" dur="10s" repeatCount="indefinite" />
+  </rect>
+  <!-- 缩放的三角形 -->
+  <polygon points="200,100 250,200 150,200" fill="#33FF57">
+    <animate attributeName="points" values="200,100 250,200 150,200;200,100 270,200 130,200;200,100 250,200 150,200" dur="5s" repeatCount="indefinite" />
+  </polygon>
+  <!-- 路径动画 -->
+  <path d="M100 200 Q 200 100 300 200 T 500 200" fill="none" stroke="#FFC300" stroke-width="4">
+    <animate attributeName="stroke-dasharray" from="0 1000" to="1000 0" dur="8s" repeatCount="indefinite" />
+  </path>
 </svg>
+
