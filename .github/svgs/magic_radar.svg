@@ -1,24 +1,100 @@
-<!-- .github/svgs/magic_radar.svg -->
-<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
-    .scan { 
-      stroke-dasharray: 5; 
+    @keyframes rotate {
+      from { transform: rotate(0); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); }
+      50% { filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); }
+    }
+    .scan {
+      stroke-dasharray: 5;
       animation: rotate 20s linear infinite;
       transform-origin: center;
+      stroke-width: 2;
+      stroke: #ff69b4; /* 粉红色扫描线 */
+    }
+    .heart {
+      fill: #e74c3c; /* 红色心形 */
+      animation: heartBeat 2s infinite;
+    }
+    .star {
+      fill: #f1c40f; /* 星星用黄色 */
+      animation: blink 1s infinite;
+    }
+    .background {
+      fill: #1a1a2e; /* 深蓝色背景 */
+    }
+    .text {
+      fill: #ffffff; /* 白色文字 */
+      font-family: "Arial", sans-serif;
+      font-size: 16;
+      text-anchor: middle;
+    }
+    .glow {
+      animation: glow 3s infinite;
+    }
+    .magic-circle {
+      fill: none;
+      stroke: #8e44ad; /* 紫色魔法圈 */
+      stroke-width: 2;
+      stroke-dasharray: 10;
+      animation: rotate 10s linear infinite;
+    }
+    .magic-book {
+      fill: #5d6d7e; /* 深灰色魔法书 */
+    }
+    .wand {
+      fill: #f39c12; /* 魔杖用橙色 */
+    }
+    .sparkle {
+      fill: #ffffff; /* 白色闪光 */
+      opacity: 0.8;
     }
   </style>
   
-  <rect width="100%" height="100%" fill="#1a1a2e"/>
+  <rect class="background" width="100%" height="100%"/>
   
-  <g transform="translate(200,100)">
+  <g transform="translate(200,200)">
     <!-- 动态扫描线 -->
-    <path class="scan" d="M-150,0 A150,150 0 1,1 150,0" stroke="#9b59b6" fill="none"/>
+    <path class="scan" d="M-150,0 A150,150 0 1,1 150,0"/>
+    <path class="scan" d="M-120,0 A120,120 0 1,1 120,0"/>
+    <path class="scan" d="M-90,0 A90,90 0 1,1 90,0"/>
     
-    <!-- 观测者标识 -->
-    <text x="-30" y="20" fill="#ff69b4" font-family="monospace" font-size="15">
-      Catharus-IE
-      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
-    </text>
+    <!-- 闪烁的星星 -->
+    <circle class="star" cx="100" cy="0" r="3"/>
+    <circle class="star" cx="-100" cy="0" r="3"/>
+    <circle class="star" cx="0" cy="100" r="3"/>
+    <circle class="star" cx="0" cy="-100" r="3"/>
+    
+    <!-- 心形图案 -->
+    <path class="heart" d="M0,-50 Q-30,-80 -60,-50 Q-60,-20 -30,0 Q-30,20 -60,50 Q-30,80 0,50 Q30,80 60,50 Q60,20 30,0 Q30,-20 60,-50 Q30,-80 0,-50 Z"/>
+    
+    <!-- 魔法圈 -->
+    <circle class="magic-circle" cx="0" cy="0" r="140"/>
+    
+    <!-- 魔法书 -->
+    <rect class="magic-book" x="-50" y="100" width="100" height="40" rx="10" ry="10"/>
+    
+    <!-- 魔杖 -->
+    <rect class="wand" x="-2" y="-100" width="4" height="100" rx="2" ry="2"/>
+    <circle class="wand" cx="0" cy="-100" r="10"/>
+    
+    <!-- 闪光效果 -->
+    <circle class="sparkle" cx="0" cy="0" r="160" opacity="0.5"/>
+    <circle class="sparkle" cx="0" cy="0" r="180" opacity="0.3"/>
+    
+    <!-- 文字表达隐晦的爱意 -->
+    <text class="text" x="0" y="180">To My Beloved</text>
+    <text class="text" x="0" y="200">Witch</text>
   </g>
 </svg>
