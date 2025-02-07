@@ -1,45 +1,12 @@
-<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
-    <!-- 背景 -->
-    <rect width="100%" height="100%" fill="#f0f0f0" />
-
-    <!-- 贪吃蛇身体 -->
-    <g id="snake">
-        <rect x="280" y="280" width="20" height="20" fill="#4CAF50" />
-        <rect x="260" y="280" width="20" height="20" fill="#4CAF50" />
-        <rect x="240" y="280" width="20" height="20" fill="#4CAF50" />
-    </g>
-
-    <!-- 动画路径 -->
-    <path id="motionPath" fill="none" stroke="red" stroke-dasharray="10,10" d="
-        M300,300
-        m-200,0
-        a200,200 0 1,0 400,0
-        a200,200 0 1,0 -400,0
-    " />
-
-    <!-- 动画 -->
-    <animateMotion
-        xlink:href="#snake"
-        dur="10s"
-        repeatCount="indefinite"
-        path="M300,300
-              m-200,0
-              a200,200 0 1,0 400,0
-              a200,200 0 1,0 -400,0"
-    />
-
-    <!-- 逐渐缩小路径的动画 -->
-    <animate
-        xlink:href="#motionPath"
-        attributeName="d"
-        dur="10s"
-        repeatCount="indefinite"
-        values="
-        M300,300 m-200,0 a200,200 0 1,0 400,0 a200,200 0 1,0 -400,0;
-        M300,300 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0;
-        M300,300 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0;
-        M300,300 m-50,0 a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0;
-        M300,300 m-200,0 a200,200 0 1,0 400,0 a200,200 0 1,0 -400,0
-        "
-    />
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景正方形 -->
+  <rect x="50" y="50" width="100" height="100" fill="none" stroke="black" stroke-width="2"/>
+  <!-- 移动的圆形 -->
+  <circle cx="50" cy="50" r="10" fill="blue">
+    <animateMotion dur="5s" repeatCount="indefinite">
+      <mpath href="#motionPath"/>
+    </animateMotion>
+  </circle>
+  <!-- 定义圆形的运动路径 -->
+  <path id="motionPath" d="M50,50 L150,50 L150,150 L50,150 L50,50" fill="none" stroke="red" stroke-width="1" />
 </svg>
