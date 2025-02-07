@@ -21,21 +21,8 @@ jobs:
           echo "当前时间：${DATE}"
           echo "SAN 值：${SAN}"
 
-          # 检查 README.md 文件内容是否符合预期
-          if ! grep -q "最后校准时间：" README.md; then
-            echo "未找到 '最后校准时间'，请检查 README.md 文件格式"
-            exit 1
-          fi
-
-          if ! grep -q "SAN-" README.md; then
-            echo "未找到 'SAN-'，请检查 README.md 文件格式"
-            exit 1
-          fi
-
-          # 替换 README 内容
-          chmod +w README.md
-          sed -i.bak "s/最后校准时间：.*/最后校准时间：${DATE}/" README.md
-          sed -i.bak "s/SAN-.*/SAN-${SAN}\/99-critical/" README.md
+          # 替换 README.md 中的内容
+          sed -i '/最后校准时间：/{s/最后校准时间：.*/最后校准时间：${DATE}/;n;s/警告：检测到.*/SAN-${SAN}\/99-critical/}' README.md
 
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
