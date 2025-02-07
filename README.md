@@ -12,9 +12,9 @@
 
 ---
 
-## 📡 
- <details>
- <summary>🔭 危险天文现象-</summary>
+
+<details>
+ <summary>🔭危险天文现象-</summary>
 
 - **拉莱耶星云异常波动**  
   `检测到异常的异步能量辐射`  
@@ -42,6 +42,7 @@
 
 ```
 </details>
+
 
 ## 🎮 **交互面板**
  <details>
