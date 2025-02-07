@@ -4,8 +4,9 @@
   
   ```diff
 + ░▒▓ 深空观测协议 vΔ3.14 ▓▒░
-! 最后校准时间：${DATE}
-- SAN-${SAN}/99-critical
+最后校准时间：${DATE}
+SAN-${SAN}/99-critical
+
   ```
 
 
