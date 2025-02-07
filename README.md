@@ -3,82 +3,69 @@
 
 `⋆⁺₊⋆ 星轨校准中...⋆⁺₊⋆` 漫步数据银河的星相学者，以太回廊的守夜人
 
-## **星仪刻录：**  
-正在编译的远古星图：  
-`Rust` `Python` `Go`  
-（偶尔被星尘干扰导致核心过载🌌）
+---
 
-## **观星台档案：**  
+## **星仪刻录**  
+![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
+![WASM](https://img.shields.io/badge/webassembly-654FF0?style=for-the-badge&logo=WebAssembly&logoColor=white)
+![量子计算](https://img.shields.io/badge/Qiskit-6929C4?style=for-the-badge&logo=qiskit&logoColor=white)
+
+---
+
+## **观星台档案**  
 ✦ [Stellaris-Core](https://github.com/Catharus-IE/Stellaris_core)  
-—— 解析星辰心跳的差分引擎，持续接收深空脉冲  
+![引擎核心](https://api.nasa.gov/assets/img/general/starfield.svg?width=400)
 
 ✦ [NebulaDB](https://github.com/Catharus-IE/Nebula_DB)  
-—— 用引力波编织的星云数据库  
-
-## **观测日志片段：**  
-"当二进制洪流冲刷过赛博海岸，我们在硅基沙滩上刻下的每个commit，都是对无限递归宇宙的温柔抵抗。"  
-
-——某次超新星爆发时的调试记录，第VII星区终端缓存  
-
-## **量子纠缠邀请函**  
-### [跃迁锚点](https://Catharus-IE.cn)  进入弦理论咖啡厅 → Catharus-IE.cn
+<img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/05/euclid_s_vision_of_the_cosmos/24744518-1-eng-GB/Euclid_s_vision_of_the_cosmos_pillars.jpg" width="500">
 
 ---
 
+## **观测日志**  
+> "当二进制洪流冲刷过赛博海岸，我们在硅基沙滩上刻下的每个commit，都是对无限递归宇宙的温柔抵抗。"  
+> <img src="https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg" width="300">
+
+---
+
+## **量子纠缠**  
+[![星门坐标](https://img.shields.io/badge/🚪_虚空回廊-3498DB?style=for-the-badge&logo=webcomponents.org)](https://Catharus-IE.cn)  
+[![量子邮包](https://img.shields.io/badge/📧_超维通讯-9B59B6?style=for-the-badge)](mailto:contact@catharus-ie.cn)
+
+---
+
+## 星轨记录仪
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Catharus-IE/Catharus-IE/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Catharus-IE/Catharus-IE/output/github-contribution-grid-snake.svg">
-  <img alt="quantum fluctuation trajectory" src="https://raw.githubusercontent.com/Catharus-IE/Catharus-IE/output/github-contribution-grid-snake.svg">
-</picture>
-
-![starry_night](https://img.nightrainmilkyway.cn/img/20250202225615973.webp)
-![cosmic_flow](https://img.nightrainmilkyway.cn/img/123368385_p0.png)
+![贡献图谱](https://raw.githubusercontent.com/Catharus-IE/Catharus-IE/output/github-contribution-grid-snake.svg)
 
 ---
 
-🪐 **星域状态面板**  
-![](https://komarev.com/ghpvc/?username=Catharus-IE&color=8A2BE2&label=今日+🌠+量子接触)
-
+## 深空扫描报告
 ```rust
 #[derive(Stellar)]
 struct AstralObserver {
     identifier: "Catharus-IE",
-    constellation: "虚空织网者",
     entropy_level: vec!["Rust", "WASM", "Zig"].shuffle(),
     
-    fn emit_photon() -> String {
-        match (1..=3).random() {
-            1 => "▓▓▓▓▓ 曲率引擎预热... ▓▓▓░░",
-            2 => "⚠️ 遭遇量子退相干 ⚠️",
-            _ => "♅♄♃ 引力透镜校准完成 ♄♃♅"
-        }
+    fn quantum_fluctuation() -> String {
+        "▓▓▓▓▓ 曲率引擎预热... ▓▓▓░░"
     }
 }
 ```
 
-🔭 **深空装备阵列**  
-![](https://img.shields.io/badge/Neovim-星界罗盘-57A143?style=flat&logo=neovim)  
-![](https://img.shields.io/badge/Alacritty-虚数终端-F74D1D?logo=terminal)  
-![](https://img.shields.io/badge/NixOS-混沌算法-5277C3?logo=nixos)
+---
 
-📊 **星图编译报告**  
-![](https://github-readme-stats.vercel.app/api?username=Catharus-IE&show_icons=true&theme=dark&hide_border=true&bg_color=00000000)  
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Catharus-IE&layout=compact&theme=dark&hide_border=true&bg_color=00000000)
+## 星云数据舱
+| 维度        | 观测值         |
+|-------------|---------------|
+| 量子接触    | ![](https://komarev.com/ghpvc/?username=Catharus-IE&color=8A2BE2) |
+| 代码密度    | ![](https://github-readme-stats.vercel.app/api?username=Catharus-IE&show_icons=true&theme=dark) |
+| 语言分布    | ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Catharus-IE&layout=compact) |
 
-🛰️ **深空探测器**  
-[![Stellaris-Core](https://github-readme-stats.vercel.app/api/pin/?username=Catharus-IE&repo=Stellaris_core&theme=blueberry)](https://github.com/Catharus-IE/Stellaris_core)  
-[![NebulaDB](https://github-readme-stats.vercel.app/api/pin/?username=Catharus-IE&repo=Nebula_DB&theme=blueberry)](https://github.com/Catharus-IE/Nebula_DB)
+---
 
-🌀 **超弦诊断**  
-```diff
-+ 检测到柯伊伯带数据流
-! 发现非欧几里得代码片段
-- 警告：希格斯场波动异常
+![宇宙微波背景](https://cdn.eso.org/images/screen/eso0932a.jpg)
+*最后观测记录：银河标准时 2023.08.02*
 ```
 
-📡 **超膜通讯**  
-[![量子邮包](https://img.shields.io/badge/📧_发送超维信息-9B59B6?style=for-the-badge&logo=protonmail)](mailto:contact@catharus-ie.cn)  
-[![星门坐标](https://img.shields.io/badge/🚪_虚空回廊-3498DB?style=for-the-badge&logo=webcomponents.org)](https://Catharus-IE.cn)
 ```
