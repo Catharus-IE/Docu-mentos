@@ -33,9 +33,8 @@ SAN-${SAN}/99-critical
 
  <details> 
  <summary>🔭分析提取-</summary>
- <pre>
    
-``` diff
+```diff
  + [√] "接收到拉莱耶低频脉冲",
  ! [≈] "检测到非欧几何波形",
  - [×] "发现未知commit记录",
