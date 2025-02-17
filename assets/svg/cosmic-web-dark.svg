@@ -1,1 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+     <!-- 量子场噪声 -->
+     <filter id="quantumNoise">
+       <feTurbulence type="fractalNoise" baseFrequency="0.004" numOctaves="5"/>
+       <feColorMatrix values="1 0 0 0 0 
+                              0 1 0 0 0 
+                              0 0 1 0 0 
+                              0 0 0 15 -7"/>
+     </filter>
+     
+     <!-- 动态背景 -->
+     <rect width="100%" height="100%" filter="url(#quantumNoise)" opacity="0.3">
+       <animate attributeName="opacity" values="0.3;0.6;0.3" dur="23s" repeatCount="indefinite"/>
+     </rect>
 
+     <!-- 粒子群 -->
+     <g id="particles">
+       <circle cx="15%" cy="20%" r="1.2" fill="#7F00FF">
+         <animate attributeName="r" values="1.2;2.3;1.2" dur="2s" repeatCount="indefinite"/>
+       </circle>
+       <!-- 添加至少50个不同位置的粒子 -->
+     </g>
+   </svg>
